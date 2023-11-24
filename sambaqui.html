@@ -8,28 +8,36 @@
 
     <title>Estudando o Português</title>
 
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="faviacon/logob.png" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div>
-                <a href="index.html"><img src="faviacon/logow.png" id="logo" alt="Logo"></a>
-            </div>
-            <h1>Estudando o Português</h1>
-            <div>
-                <ul class="menu">
-                    <li><a href="sambaqui.html" class="nav-link">Sambaqui</a></li>
-                    <li><a href="preconceito.html" class="nav-link">Preconceito Linguístico</a></li>
-                    <li><a href="historia.html" class="nav-link">História do Português</a></li>
-                    <li><a href="variacao.html" class="nav-link">Variação Linguística</a>
-                    <li><a href="index.html" class="nav-link">Início</a></li>
+    <header id="navbar">
+        <nav class="navbar-container container">
+            <a href="index.html" class="home-link">
+                Estudando o Português
+            </a>
+            <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
+                aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div id="navbar-menu" aria-labelledby="navbar-toggle">
+                <ul class="navbar-links">
+                    <li class="navbar-item"><a class="navbar-link" href="preconceito.html">Preconceito Linguístico</a>
+                    </li>
+                    <li class="navbar-item"><a class="navbar-link" href="historia.html">História do Português</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="variacao.html">Variação Linguística</a>
+                    <li class="navbar-item"><a class="navbar-link" href="index.html">Início</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <main id="main-secundario">
         <div>
             <h2>Sambaqui: Janelas para o Passado Pré-Histórico do Brasil</h2>
@@ -73,22 +81,49 @@
                 do Brasil. São janelas para o passado pré-histórico, onde podemos vislumbrar a vida, a cultura e a
                 tecnologia das antigas populações costeiras. Proteger e preservar esses sítios é essencial para
                 continuar desvendando os segredos do passado e valorizar a riqueza histórica do Brasil.</p>
-            </div>
-            <div>
-                <h3>REFERÊNCIAS</h3>
-                <p class="referencia"></p>
-                <p class="referencia"></p>
-                <p class="referencia"></p>
-                <p class="referencia"></p>
-                <p class="referencia"></p>
-                <p class="referencia"></p>
-                <p class="referencia"></p>
-                <p class="referencia"></p>
-            </div>
-        </main>
+
+            <h3>REFERÊNCIAS</h3>
+            <p class="referencia"></p>
+            <p class="referencia"></p>
+            <p class="referencia"></p>
+            <p class="referencia"></p>
+            <p class="referencia"></p>
+            <p class="referencia"></p>
+            <p class="referencia"></p>
+            <p class="referencia"></p>
+        </div>
         <footer>
-            
+            <div class="footer-content">
+                <h3>Estudando o Português</h3>
+                <p>Site designado para o aprendizado sobre algumas áreas do português e da literatura. Desenvolvido por
+                    estudantes do Instituto Federal Catarinense.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy; <a href="#">Estudando o Português</a> </p>
+                <div class="footer-menu">
+                    <ul class="f-menu"> 
+                        <li><a href="#">Início</a></li>
+                    </ul>
+                </div> 
+            </div>
         </footer>
+        <script>
+            const navbarToggle = navbar.querySelector("#navbar-toggle");
+            const navbarMenu = document.querySelector("#navbar-menu");
+            const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
+            let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
+
+            const toggleNavbarVisibility = () => {
+                isNavbarExpanded = !isNavbarExpanded;
+                navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+            };
+
+            navbarToggle.addEventListener("click", toggleNavbarVisibility);
+
+            navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
+            navbarMenu.addEventListener("click", toggleNavbarVisibility);
+        </script>
+    </main>
 </body>
 
 </html>
