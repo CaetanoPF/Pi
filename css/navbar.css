@@ -3,14 +3,14 @@
     margin: 0;
     padding: 0;
 }
- 
+
 :root {
     --navbar-bg-color: hsl(0, 0%, 15%);
     --navbar-text-color: hsl(0, 0%, 85%);
     --navbar-text-color-focus: white;
     --navbar-bg-contrast: hsl(0, 0%, 25%);
 }
- 
+
 body {
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
@@ -24,6 +24,8 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* GERAL */
 
 #navbar {
     --navbar-height: 64px;
@@ -46,6 +48,8 @@ body {
     margin: 0.4em;
     width: 100%;
 }
+
+/* LINKS */
 
 .home-link,
 .navbar-link {
@@ -155,6 +159,8 @@ body {
 #navbar-toggle[aria-expanded="true"]+#navbar-menu .navbar-links {
     padding: 1em;
 }
+
+/* TABLET OU CELULARES */
 
 @media screen and (min-width: 700px) {
 

@@ -2,37 +2,45 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Estudando o Português</title>
 
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="faviacon/logob.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="faviacon/logob.png" type="image/x-icon" />
 </head>
 
 <body>
-
   <header id="navbar">
     <nav class="navbar-container container">
-      <a href="index.html" class="home-link">
-        Estudando o Português
-      </a>
+      <a href="index.html" class="home-link"> Estudando o Português </a>
       <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
         aria-expanded="false">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+
+      <!-- LINKS -->
+
       <div id="navbar-menu" aria-labelledby="navbar-toggle">
         <ul class="navbar-links">
-          <li class="navbar-item"><a class="navbar-link" href="preconceito.html">Preconceito Linguístico</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="historia.html">História do Português</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="variacao.html">Variação Linguística</a>
-          <li class="navbar-item"><a class="navbar-link" href="sambaqui.html">Sambaqui</a></li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="preconceito.html">Preconceito Linguístico</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="historia.html">História do Português</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="variacao.html">Variação Linguística</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="sambaqui.html">Sambaqui</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -40,41 +48,50 @@
 
   <main>
     <div>
-      <p><a href="preconceito.html">PRECONCEITO
-          LINGUÍSTICO:</a> Preconceitos com sotaques e de regiões no Brasil.</p>
-      <img src="imagem/preconceito.png" alt="Imagem Assunto">
+      <img src="imagem/preconceito.png" alt="Imagem Assunto" />
+      <p>
+        <a href="preconceito.html">PRECONCEITO LINGUÍSTICO:</a> Preconceitos
+        com sotaques e de regiões no Brasil.
+      </p>
     </div>
 
     <div>
-      <p><a href="sambaqui.html">SAMBAQUI:</a> Sambaquis, as estruturas deixadas por um
-        povo antigo.</p>
-
-      <img src="imagem/sambaqui.jpg" alt="Imagem Assunto">
+      <img src="imagem/sambaqui.jpg" alt="Imagem Assunto" />
+      <p>
+        <a href="sambaqui.html">SAMBAQUI:</a> Sambaquis, as estruturas
+        deixadas por um povo antigo.
+      </p>
     </div>
 
     <div>
-      <p><a href="historia.html">HISTÓRIA DO PORTUGUÊS:</a> Entenda de onde se originou
-        o idioma Brasileiro.</p>
-
-      <img src="imagem/historiapt.jpeg" alt="Imagem Assunto">
+      <img src="imagem/historiapt.jpeg" alt="Imagem Assunto" />
+      <p>
+        <a href="historia.html">HISTÓRIA DO PORTUGUÊS:</a> Entenda de onde se
+        originou o idioma Brasileiro.
+      </p>
     </div>
 
     <div>
-      <p><a href="variacao.html">VARIAÇÃO LINGUÍSTICA:</a> Descubra todas as variações
-        linguísticas que modificam o linguajar Brasileiro ao longo dos anos.</p>
-
-      <img src="imagem/variacaolg.jpeg" alt="Imagem Assunto">
+      <img src="imagem/variacaolg.jpeg" alt="Imagem Assunto" />
+      <p>
+        <a href="variacao.html">VARIAÇÃO LINGUÍSTICA:</a> Descubra todas as
+        variações linguísticas que modificam o linguajar Brasileiro ao longo
+        dos anos.
+      </p>
     </div>
   </main>
 
   <footer>
     <div class="footer-content">
       <h3>Estudando o Português</h3>
-      <p>Site designado para o aprendizado sobre algumas áreas do português e da literatura. Desenvolvido por
-        estudantes do Instituto Federal Catarinense.</p>
+      <p>
+        Site designado para o aprendizado sobre algumas áreas do português e
+        da literatura. Desenvolvido por estudantes do Instituto Federal
+        Catarinense.
+      </p>
     </div>
     <div class="footer-bottom">
-      <p>copyright &copy; <a href="#">Estudando o Português</a> </p>
+      <p>copyright &copy; <a href="#">Estudando o Português</a></p>
       <div class="footer-menu">
         <ul class="f-menu">
           <li><a href="#">Início</a></li>
@@ -86,7 +103,8 @@
     const navbarToggle = navbar.querySelector("#navbar-toggle");
     const navbarMenu = document.querySelector("#navbar-menu");
     const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
-    let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
+    let isNavbarExpanded =
+      navbarToggle.getAttribute("aria-expanded") === "true";
 
     const toggleNavbarVisibility = () => {
       isNavbarExpanded = !isNavbarExpanded;
@@ -95,7 +113,9 @@
 
     navbarToggle.addEventListener("click", toggleNavbarVisibility);
 
-    navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
+    navbarLinksContainer.addEventListener("click", (e) =>
+      e.stopPropagation()
+    );
     navbarMenu.addEventListener("click", toggleNavbarVisibility);
   </script>
 </body>

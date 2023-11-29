@@ -28,7 +28,8 @@
             </button>
             <div id="navbar-menu" aria-labelledby="navbar-toggle">
                 <ul class="navbar-links">
-                    <li class="navbar-item"><a class="navbar-link" href="preconceito.html">Preconceito Linguístico</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="preconceito.html">Preconceito Linguístico</a>
+                    </li>
                     <li class="navbar-item"><a class="navbar-link" href="historia.html">História do Português</a></li>
                     <li class="navbar-item"><a class="navbar-link" href="variacao.html">Variação Linguística</a>
                     <li class="navbar-item"><a class="navbar-link" href="sambaqui.html">Sambaqui</a></li>
@@ -37,10 +38,10 @@
         </nav>
     </header>
 
-    <main id="main-secundario">
+    <main>
         <section>
             <div>
-                <h2>Sambaqui: Janelas para o Passado Pré-Histórico do Brasil</h2>
+                <h1>Sambaqui: Janelas para o Passado Pré-Histórico do Brasil</h1>
 
                 <img src="imagem/sambaqui.jpg" alt="IMAGEM">
 
@@ -127,42 +128,44 @@
                     Sul: Arqueoestratigrafia e processos de formação de Sambaquis (Santa Catarina, Brasil) e concheros
                     (Terra do Fogo, Argentina). Universidade de São Paulo, Terra do Fogo, Argentina, 2012. Disponível
                     em:
-                    https://www.researchgate.net/profile/Ximena-Villagran/publication/343999545_Micromorphology_of_South_American_shell-matrix_sites_archaeostratigraphy_and_site_formation_processes_of_shell_mounds_Santa_Catarina_Brazil_and_shell_middens_Tierra_del_Fuego_Argentina/links/5f4d576b299bf13c506d0f92/Micromorphology-of-South-American-shell-matrix-sites-archaeostratigraphy-and-site-formation-processes-of-shell-mounds-Santa-Catarina-Brazil-and-shell-middens-Tierra-del-Fuego-Argentina.pdf.
+                    https://www.researchgate.net/profile/Xell-mounds-Santa-Catarina-Brazil-and-shell-middens-Tierra-del-Feego-Argentina.pdf.
                     Acesso em: 26 Abr. 2023.</p>
             </div>
         </section>
-        <footer>
-            <div class="footer-content">
-                <h3>Estudando o Português</h3>
-                <p>Site designado para o aprendizado sobre algumas áreas do português e da literatura. Desenvolvido por
-                    estudantes do Instituto Federal Catarinense.</p>
-            </div>
-            <div class="footer-bottom">
-                <p>copyright &copy; <a href="#">Estudando o Português</a> </p>
-                <div class="footer-menu">
-                    <ul class="f-menu">
-                        <li><a href="#">Início</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <script>
-            const navbarToggle = navbar.querySelector("#navbar-toggle");
-            const navbarMenu = document.querySelector("#navbar-menu");
-            const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
-            let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
-
-            const toggleNavbarVisibility = () => {
-                isNavbarExpanded = !isNavbarExpanded;
-                navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
-            };
-
-            navbarToggle.addEventListener("click", toggleNavbarVisibility);
-
-            navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
-            navbarMenu.addEventListener("click", toggleNavbarVisibility);
-        </script>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Estudando o Português</h3>
+            <p>Site designado para o aprendizado sobre algumas áreas do português e da literatura. Desenvolvido por
+                estudantes do Instituto Federal Catarinense.</p>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; <a href="#">Estudando o Português</a> </p>
+            <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a href="#">Início</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const navbarToggle = navbar.querySelector("#navbar-toggle");
+        const navbarMenu = document.querySelector("#navbar-menu");
+        const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
+        let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
+
+        const toggleNavbarVisibility = () => {
+            isNavbarExpanded = !isNavbarExpanded;
+            navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+        };
+
+        navbarToggle.addEventListener("click", toggleNavbarVisibility);
+
+        navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
+        navbarMenu.addEventListener("click", toggleNavbarVisibility);
+    </script>
+
 </body>
 
 </html>

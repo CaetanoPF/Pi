@@ -26,9 +26,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+
+            <!-- LINKS -->
+
             <div id="navbar-menu" aria-labelledby="navbar-toggle">
                 <ul class="navbar-links">
-                    <li class="navbar-item"><a class="navbar-link" href="preconceito.html">Preconceito Linguístico</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="preconceito.html">Preconceito Linguístico</a>
+                    </li>
                     <li class="navbar-item"><a class="navbar-link" href="historia.html">História do Português</a></li>
                     <li class="navbar-item"><a class="navbar-link" href="variacao.html">Variação Linguística</a>
                     <li class="navbar-item"><a class="navbar-link" href="sambaqui.html">Sambaqui</a></li>
@@ -37,13 +41,11 @@
         </nav>
     </header>
 
-    <main id="main-secundario">
+    <main>
         <section>
             <div>
-                <h2>Preconceito Linguístico: Julgando Pelas Palavras</h2>
-
+                <h1>Preconceito Linguístico: Julgando Pelas Palavras</h1>
                 <img src="imagem/preconceito.png" alt="IMAGEM">
-
                 <p>Na obra "preconceito linguístico": o que é, como se faz (1999), o professor, linguista Marcos Bagno
                     explora vários aspectos da linguagem e seu preconceito e seu impacto social, o livro é dividido em
                     quatro capítulos. (DIANA, 200?).</p>
@@ -64,10 +66,10 @@
                 <p>Mito n° 2 “Brasileiro não sabe português” / “Só em Portugal se fala bem português”: apresenta as
                     diferenças entre o português falado no Brasil e em Portugal, este último considerado superior e mais
                     “correto”. (BAGNO, 2002).
-                <p>
-
+                </p>
+                <figure>
                     <img src="imagem/variacaolg.jpeg" alt="IMAGEM">
-
+                </figure>
                 <p>Brasil é muito conhecido pelo preconceito linguístico, pois muitas pessoas acreditam que sua maneira
                     de
                     falar é superior à de outros grupos. (DIANA, 200?).</p>
@@ -100,13 +102,13 @@
 
                 <h3>REFERÊNCIAS</h3>
 
-                <p class="referencia">BAGNO, Marcos. Preconceito lingüístico  o que é, como se faz. 15 ed. Loyola: São
+                <p class="referencia">BAGNO, Marcos. Preconceito linguístico: o que é, como se faz. 15 ed. Loyola: São
                     Paulo, 2002. Acesso em: 8 Abr. 2023.</p>
                 <p class="referencia">DIANA, Daniela. Preconceito Linguístico. Toda Matéria, [s.d.]. Disponível em:
                     https://www.todamateria.com.br/preconceito-linguistico/. Acesso em: 8 Abr. 2023.</p>
                 <p class="referencia">ORSI, Vivian. Tabu e preconceito linguístico. Revista Virtual de Estudos da
                     Linguagem,
-                    v. 9, n. 17, p. 334-348, 2011. Disponível em: http://hdl.handle.net/11449/122427.  Acesso em: 7 Abr.
+                    v. 9, n. 17, p. 334-348, 2011. Disponível em: http://hdl.handle.net/11449/122427. Acesso em: 7 Abr.
                     2023.</p>
                 <p class="referencia">SILVA, A. J. B. da. Português de arremedo: um lado do preconceito linguístico no
                     Brasil. Cadernos de Estudos Linguísticos, Campinas, SP, v. 61, p. 1–19, 2019. DOI:
@@ -115,38 +117,39 @@
                 </p>
             </div>
         </section>
-        <footer>
-            <div class="footer-content">
-                <h3>Estudando o Português</h3>
-                <p>Site designado para o aprendizado sobre algumas áreas do português e da literatura. Desenvolvido por
-                    estudantes do Instituto Federal Catarinense.</p>
-            </div>
-            <div class="footer-bottom">
-                <p>copyright &copy; <a href="#">Estudando o Português</a> </p>
-                <div class="footer-menu">
-                    <ul class="f-menu">
-                        <li><a href="#">Início</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <script>
-            const navbarToggle = navbar.querySelector("#navbar-toggle");
-            const navbarMenu = document.querySelector("#navbar-menu");
-            const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
-            let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
-
-            const toggleNavbarVisibility = () => {
-                isNavbarExpanded = !isNavbarExpanded;
-                navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
-            };
-
-            navbarToggle.addEventListener("click", toggleNavbarVisibility);
-
-            navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
-            navbarMenu.addEventListener("click", toggleNavbarVisibility);
-        </script>
     </main>
+    <footer>
+        <div class="footer-content">
+            <h3>Estudando o Português</h3>
+            <p>Site designado para o aprendizado sobre algumas áreas do português e da literatura. Desenvolvido por
+                estudantes do Instituto Federal Catarinense.</p>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; <a href="#">Estudando o Português</a> </p>
+            <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a href="#">Início</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const navbarToggle = navbar.querySelector("#navbar-toggle");
+        const navbarMenu = document.querySelector("#navbar-menu");
+        const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
+        let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
+
+        const toggleNavbarVisibility = () => {
+            isNavbarExpanded = !isNavbarExpanded;
+            navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+        };
+
+        navbarToggle.addEventListener("click", toggleNavbarVisibility);
+
+        navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
+        navbarMenu.addEventListener("click", toggleNavbarVisibility);
+    </script>
+
 </body>
 
 </html>

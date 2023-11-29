@@ -28,7 +28,8 @@
             </button>
             <div id="navbar-menu" aria-labelledby="navbar-toggle">
                 <ul class="navbar-links">
-                    <li class="navbar-item"><a class="navbar-link" href="preconceito.html">Preconceito Linguístico</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="preconceito.html">Preconceito Linguístico</a>
+                    </li>
                     <li class="navbar-item"><a class="navbar-link" href="historia.html">História do Português</a></li>
                     <li class="navbar-item"><a class="navbar-link" href="variacao.html">Variação Linguística</a>
                     <li class="navbar-item"><a class="navbar-link" href="sambaqui.html">Sambaqui</a></li>
@@ -37,7 +38,7 @@
         </nav>
     </header>
 
-    <main id="main-secundario">
+    <main>
         <section>
             <div>
                 <h1>As Quatro Faces da Variação Linguística no Brasil</h2>
@@ -144,7 +145,6 @@
 
                     <h3>REFERÊNCIAS</h3>
 
-                    <p class="referencia"></p>
                     <p class="referencia">BERNARDO, Maria Clara Rolão ; MONTENEGRO, Helena Mateus, orgs. – “Actas do I
                         Encontro de Estudos Dialectológicos.” Ponta Delgada : Instituto Cultural de Ponta Delgada, 2006.
                         ISBN 972-9216-89-4. p. 363-380. Acesso: 7 Abr. 2023.
@@ -171,38 +171,40 @@
                         sociedade. Londres: Penguin Books.</p>
             </div>
         </section>
-        <footer>
-            <div class="footer-content">
-                <h3>Estudando o Português</h3>
-                <p>Site designado para o aprendizado sobre algumas áreas do português e da literatura. Desenvolvido por
-                    estudantes do Instituto Federal Catarinense.</p>
-            </div>
-            <div class="footer-bottom">
-                <p>copyright &copy; <a href="#">Estudando o Português</a> </p>
-                <div class="footer-menu">
-                    <ul class="f-menu">
-                        <li><a href="#">Início</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <script>
-            const navbarToggle = navbar.querySelector("#navbar-toggle");
-            const navbarMenu = document.querySelector("#navbar-menu");
-            const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
-            let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
-
-            const toggleNavbarVisibility = () => {
-                isNavbarExpanded = !isNavbarExpanded;
-                navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
-            };
-
-            navbarToggle.addEventListener("click", toggleNavbarVisibility);
-
-            navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
-            navbarMenu.addEventListener("click", toggleNavbarVisibility);
-        </script>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Estudando o Português</h3>
+            <p>Site designado para o aprendizado sobre algumas áreas do português e da literatura. Desenvolvido por
+                estudantes do Instituto Federal Catarinense.</p>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; <a href="#">Estudando o Português</a> </p>
+            <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a href="#">Início</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const navbarToggle = navbar.querySelector("#navbar-toggle");
+        const navbarMenu = document.querySelector("#navbar-menu");
+        const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
+        let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
+
+        const toggleNavbarVisibility = () => {
+            isNavbarExpanded = !isNavbarExpanded;
+            navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+        };
+
+        navbarToggle.addEventListener("click", toggleNavbarVisibility);
+
+        navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
+        navbarMenu.addEventListener("click", toggleNavbarVisibility);
+    </script>
+
 </body>
 
 </html>
